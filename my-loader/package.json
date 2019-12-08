@@ -1,0 +1,12 @@
+{
+  "name": "my-loader",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "lib/"
+  ],
+  "dependencies": {
+    "loader-utils": "^1.2.3"
+  }
+}

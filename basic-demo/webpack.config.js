@@ -1,9 +1,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const { loaderA, loaderB, loaderPitch } = require("my-loader");
 const resolveApp = p => path.resolve(__dirname, p);
 const appHtml = resolveApp("public/index.html");
+const appSrc = resolveApp("src");
+
 module.exports = {
   mode: "production",
   entry: {
@@ -21,6 +23,21 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.js/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: loaderPitch
+          },
+          {
+            loader: loaderA
+          },
+          {
+            loader: loaderB
+          }
+        ]
+      },
       {
         test: /\.css/,
         use: [
