@@ -1,5 +1,8 @@
-// import Styles from 'style-loader!css-loader?modules!./demo.css';
-import demo2 from './demo2.css';
+import style1 from './style1.css';
+import c1Lazy from './c1.lazy.css';
+import c2Lazy from './c2.lazy.css';
 
-// console.log(Styles);
-console.log(demo2);
+c1Lazy.use();
+c2Lazy.use();
+
+console.log(style1);

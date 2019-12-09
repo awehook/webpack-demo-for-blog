@@ -4,5 +4,5 @@ module.exports = function() {};
 module.exports.pitch = function loader(request) {
   console.log(request);
   const d = loaderUtils.stringifyRequest(this,`!!${request}`);
-  return d;
+  return `var content = require(${d})`;
 }

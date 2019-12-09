@@ -40,20 +40,30 @@ module.exports = {
       },
       {
         test: /\.css/,
+        exclude: /\.lazy\.css$/i,
         use: [
-          "style-loader",
-          // {
-          //   loader: MiniCssExtractPlugin.loader,
-          //   options: {
-          //     // publicPath: "./public/"
-          //   }
-          // },
           {
-            loader: "css-loader",
+            loader: "style-loader",
             options: {
-              modules: true
-              // localIdentName: '[name]--[local]--[hash:base64:5]'
+              injectType: "linkTag"
             }
+          },
+          {
+            loader: "css-loader"
+          }
+        ]
+      },
+      {
+        test: /\.lazy\.css$/i,
+        use: [
+          {
+            loader: "style-loader",
+            options: {
+              injectType: "lazyStyleTag"
+            }
+          },
+          {
+            loader: "css-loader"
           }
         ]
       }

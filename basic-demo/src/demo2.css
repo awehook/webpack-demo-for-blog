@@ -4,3 +4,9 @@
     border: 1px solid #fff;
     font-size: 50px;
 }
+
+.dio {
+    border: 1px solid #fff;
+    font-size: 50px;
+    display: flex;
+}

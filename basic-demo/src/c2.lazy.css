@@ -1,0 +1,12 @@
+.c2neo {
+  color: blanchedalmond;
+  background: pink;
+  border: 1px solid #fff;
+  font-size: 50px;
+}
+
+.c2dio {
+  border: 1px solid #fff;
+  font-size: 50px;
+  display: flex;
+}
