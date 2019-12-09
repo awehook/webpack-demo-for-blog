@@ -3,6 +3,6 @@ module.exports = function() {};
 
 module.exports.pitch = function loader(request) {
   console.log(request);
-  const d = loaderUtils.stringifyRequest(this,`!!${request}`);
-  return `var content = require(${d})`;
+  const processedRequest = loaderUtils.stringifyRequest(this,`!!${request}`);
+  return `var content = require(${processedRequest})`;
 }

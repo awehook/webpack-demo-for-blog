@@ -27,9 +27,9 @@ module.exports = {
         test: /\.js/,
         exclude: /node_modules/,
         use: [
-          // {
-          //   loader: loaderPitch
-          // },
+          {
+            loader: loaderPitch
+          },
           {
             loader: loaderA
           },
@@ -40,7 +40,28 @@ module.exports = {
       },
       {
         test: /\.css/,
+        exclude: /\.lazy\.css$/i,
         use: [
+          {
+            loader: "style-loader",
+            options: {
+              injectType: "linkTag"
+            }
+          },
+          {
+            loader: "css-loader"
+          }
+        ]
+      },
+      {
+        test: /\.lazy\.css$/i,
+        use: [
+          {
+            loader: "style-loader",
+            options: {
+              injectType: "lazyStyleTag"
+            }
+          },
           {
             loader: "css-loader"
           }

@@ -1,3 +1,3 @@
 module.exports = function(input) {
-  return `${input};console.log('b');`
+  return `${input}\nconsole.log('b');`
 }

@@ -12,6 +12,7 @@
   },
   "scripts": {
     "babel": "node run-babel-loader.js",
-    "css": "node run-css-loader.js"
+    "css": "node run-css-loader.js",
+    "my": "node run-my-loader.js"
   }
 }
