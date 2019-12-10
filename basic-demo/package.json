@@ -11,13 +11,15 @@
     "style-loader": "^1.0.1",
     "webpack": "^4.41.2",
     "webpack-dev-server": "^3.9.0",
-    "my-loader": "file:../my-loader"
+    "my-loader": "file:../my-loader",
+    "loader-execute-internal-plugin": "file:../loader-execute-internal-plugin"
   },
   "scripts": {
     "clean": "rm -rf ./build",
     "build": "yarn clean && webpack",
     "dev": "webpack-dev-server",
-    "debug": "node --inspect-brk  node_modules/webpack-cli/bin/cli.js"
+    "debug": "node --inspect-brk  node_modules/webpack-cli/bin/cli.js",
+    "start": "yarn clean && webpack && node build/static/js/bundle.js"
   },
   "devDependencies": {
     "webpack-cli": "^3.3.10"

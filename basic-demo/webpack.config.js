@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const LoaderExecuteInternalPlugin = require("loader-execute-internal-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { loaderA, loaderB, loaderPitch } = require("my-loader");
 const resolveApp = p => path.resolve(__dirname, p);
@@ -7,31 +8,32 @@ const appHtml = resolveApp("public/index.html");
 const appSrc = resolveApp("src");
 
 module.exports = {
-  mode: "production",
+  mode: "none",
   entry: {
     main: resolveApp("src/index.js")
   },
   output: {
     path: resolveApp("build"),
-    filename: "static/js/[name].[contenthash:8].js"
+    filename: "static/js/bundle.js"
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: appHtml
-    })
+    new LoaderExecuteInternalPlugin(),
+    // new HtmlWebpackPlugin({
+    //   inject: true,
+    //   template: appHtml
+    // })
   ],
   module: {
     rules: [
       {
         test: /\.js/,
-        exclude: /node_modules/,
+        exclude: [/node_modules/,/src/],
         use: [
-          // {
-          //   loader: loaderPitch
-          // },
           {
             loader: loaderA
+          },
+          {
+            loader: loaderPitch
           },
           {
             loader: loaderB
@@ -52,5 +54,8 @@ module.exports = {
     contentBase: resolveApp("build"),
     compress: true,
     port: 9000
+  },
+  resolveLoader: {
+    modules: ['node_modules','node_modules/my-loader/lib']
   }
 };

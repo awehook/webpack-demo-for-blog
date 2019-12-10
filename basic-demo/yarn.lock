@@ -2314,6 +2314,13 @@ lcid@^2.0.0:
   dependencies:
     invert-kv "^2.0.0"
 
+"loader-execute-internal-plugin@file:../loader-execute-internal-plugin":
+  version "1.0.0"
+  dependencies:
+    loader-utils "^1.1.0"
+    schema-utils "^1.0.0"
+    webpack-sources "^1.1.0"
+
 loader-runner@^2.4.0:
   version "2.4.0"
   resolved "https://registry.npm.taobao.org/loader-runner/download/loader-runner-2.4.0.tgz#ed47066bfe534d7e84c4c7b9998c2a75607d9357"
