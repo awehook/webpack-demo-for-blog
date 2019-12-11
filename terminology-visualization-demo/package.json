@@ -1,0 +1,28 @@
+{
+  "name": "module-visual-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "css-loader": "^3.2.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "my-loader": "file:../my-loader",
+    "prettier": "^1.19.1",
+    "style-loader": "^1.0.1",
+    "terminology-visualization-plugin": "file:../terminology-visualization-plugin",
+    "webpack": "^4.41.2",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "scripts": {
+    "clean": "rm -rf ./build",
+    "build": "yarn clean && webpack",
+    "dev": "webpack-dev-server",
+    "debug": "node --inspect-brk  node_modules/webpack-cli/bin/cli.js",
+    "start": "yarn clean && webpack && node build/static/js/bundle.js"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.10"
+  }
+}

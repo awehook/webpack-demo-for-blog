@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title><%= title %></title>
+   
+    <script>
+      window.enableWebSocket = <%- escapeJson(enableWebSocket) %>;
+    </script>
+    <%- include('script', { filename: 'viewer.js' }) %>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script>
+      window.data = <%- escapeJson(data) %>;
+    </script>
+  </body>
+</html>
