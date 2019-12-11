@@ -2,28 +2,35 @@
   "name": "terminology-visualization-plugin",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "dist/cjs.js",
+  "main": "lib/cjs.js",
   "files": [
-    "dist/"
+    "lib/"
   ],
   "scripts": {
-    "start": "gulp watch",
-    "build": "gulp build"
+    "start": "gulp watch -e dev",
+    "build": "gulp build -e prod"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/plugin-proposal-decorators": "^7.7.4",
     "@babel/plugin-transform-runtime": "^7.7.6",
+    "chalk": "^2.4.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
     "loader-utils": "^1.1.0",
     "lodash": "^4.17.15",
+    "opener": "^1.5.1",
     "schema-utils": "^1.0.0",
-    "webpack-sources": "^1.1.0"
+    "webpack-sources": "^1.1.0",
+    "ws": "^6.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.7.4",
+    "@babel/runtime": "^7.7.6",
+    "babel-loader": "^8.0.6",
     "babel-plugin-lodash": "^3.3.4",
     "commander": "^4.0.1",
     "cross-env": "^5.2.0",
@@ -32,8 +39,11 @@
     "gulp": "4.0.0",
     "gulp-babel": "^8.0.0",
     "mobx": "^5.15.0",
+    "mobx-react": "^6.1.4",
     "postcss-loader": "^3.0.0",
     "preact": "^10.1.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "style-loader": "^1.0.1",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.6",

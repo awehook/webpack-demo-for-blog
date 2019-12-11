@@ -1,3 +1,4 @@
+const visualizer = require('./visualizer');
 const pluginName = "loader-execute-internal-plugin";
 
 class TerminologyVisualizationPlugin {
@@ -43,7 +44,15 @@ class TerminologyVisualizationPlugin {
     });
   }
 
-  async startServer(status) {}
+  async startServer(stats) {
+    if(this.server) {
+
+    } else {
+      this.server = visualizer.startServer(stats,{
+        ...this.opts
+      })
+    }
+  }
 }
 
 export default TerminologyVisualizationPlugin;

@@ -1,4 +1,6 @@
+import ReactDOM from "react-dom";
 import { store } from "./store";
+import ModuleViewer from "./components/module-viewer";
 
 let ws;
 try {
@@ -12,5 +14,7 @@ try {
 }
 
 window.addEventListener("load", () => {
-  store.setData(window)
+  store.setData(window);
+
+  ReactDOM.render(<ModuleViewer/>, document.getElementById('app'));
 });
