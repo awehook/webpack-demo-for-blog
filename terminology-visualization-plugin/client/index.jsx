@@ -1,4 +1,5 @@
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
+import {h,render} from 'preact';
 import { store } from "./store";
 import ModuleViewer from "./components/module-viewer";
 
@@ -16,5 +17,5 @@ try {
 window.addEventListener("load", () => {
   store.setData(window);
 
-  ReactDOM.render(<ModuleViewer/>, document.getElementById('app'));
+  render(<ModuleViewer/>, document.getElementById('app'));
 });

@@ -17,7 +17,7 @@ module.exports = {
     path: resolveApp("build"),
     filename: "static/js/bundle.js"
   },
-  plugins: [new TerminologyVisualizationPlugin(),new BundleAnalyzerPlugin()],
+  plugins: [new TerminologyVisualizationPlugin(), new BundleAnalyzerPlugin()],
   module: {
     rules: [
       // {

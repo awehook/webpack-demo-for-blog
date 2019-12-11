@@ -21,6 +21,7 @@ async function startServer(status, opts) {
 
   const app = express();
   app.engine("ejs", require("ejs").renderFile);
+  app.set('view engine', 'ejs');
   app.set("views", `${projRoot}/views`);
   app.use(express.static(`${projRoot}/public`));
 

@@ -37,17 +37,17 @@ module.exports = opts => {
             presets: [
               [
                 "@babel/preset-env",
-                // {
-                //   modules: false,
-                //   useBuiltIns: "usage",
-                //   corejs: 2,
-                //   debug: true,
-                //   exclude: [
-                //     // Excluding unused polyfills to completely get rid of `core.js` in the resulting bundle
-                //     "web.dom.iterable",
-                //     "es7.symbol.async-iterator"
-                //   ]
-                // }
+                {
+                  modules: false,
+                  // useBuiltIns: "usage",
+                  // corejs: 2,
+                  // debug: true,
+                  // exclude: [
+                  //   // Excluding unused polyfills to completely get rid of `core.js` in the resulting bundle
+                  //   "web.dom.iterable",
+                  //   "es7.symbol.async-iterator"
+                  // ]
+                }
               ],
               "@babel/preset-react"
             ],

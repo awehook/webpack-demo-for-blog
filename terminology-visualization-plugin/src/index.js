@@ -10,7 +10,7 @@ class TerminologyVisualizationPlugin {
       port: "port" in opts ? (opts.port === "auto" ? 0 : opts.port) : 9999
     };
     this.server = null;
-    this.opts = opts;
+    //TODO 
     this.visualizeObj = {};
   }
 

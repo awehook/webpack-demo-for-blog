@@ -3,6 +3,9 @@ const gulp = require("gulp");
 const PLUGIN_SRC = "./src/**/*.js";
 const PLUGIN_DEST = "./lib";
 
+const CLIENT_SRC = "./client";
+const CLIENT_DEST = "./public";
+
 const cli = require("commander")
   .usage("<task> [options]")
   .option(
@@ -81,4 +84,6 @@ function watch() {
   gulp
     .watch(PLUGIN_SRC, gulp.series(cleanPluginScripts, compilePluginScripts))
     .on("error", () => {});
+
+  gulp.watch(CLIENT_SRC, gulp.series(cleanClientScripts,complileClientScripts));
 }

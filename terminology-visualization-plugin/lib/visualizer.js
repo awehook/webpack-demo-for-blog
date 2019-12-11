@@ -44,6 +44,7 @@ function _startServer() {
     const viewerData = getViewerData(status);
     const app = express();
     app.engine("ejs", require("ejs").renderFile);
+    app.set('view engine', 'ejs');
     app.set("views", `${projRoot}/views`);
     app.use(express.static(`${projRoot}/public`));
     app.use("/", (req, res) => {
