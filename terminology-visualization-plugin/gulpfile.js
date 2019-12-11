@@ -85,5 +85,7 @@ function watch() {
     .watch(PLUGIN_SRC, gulp.series(cleanPluginScripts, compilePluginScripts))
     .on("error", () => {});
 
-  gulp.watch(CLIENT_SRC, gulp.series(cleanClientScripts,complileClientScripts));
+  gulp
+    .watch(CLIENT_SRC, gulp.series(cleanClientScripts, complileClientScripts))
+    .on("error", () => {});
 }

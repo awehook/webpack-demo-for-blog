@@ -34,20 +34,21 @@ module.exports = opts => {
           exclude: /node-modules/,
           loader: "babel-loader",
           options: {
+            babelrc: false,
             presets: [
               [
                 "@babel/preset-env",
-                {
-                  modules: false,
-                  // useBuiltIns: "usage",
-                  // corejs: 2,
-                  // debug: true,
-                  // exclude: [
-                  //   // Excluding unused polyfills to completely get rid of `core.js` in the resulting bundle
-                  //   "web.dom.iterable",
-                  //   "es7.symbol.async-iterator"
-                  // ]
-                }
+                // {
+                //   modules: false,
+                //   // useBuiltIns: "usage",
+                //   // corejs: 2,
+                //   // debug: true,
+                //   // exclude: [
+                //   //   // Excluding unused polyfills to completely get rid of `core.js` in the resulting bundle
+                //   //   "web.dom.iterable",
+                //   //   "es7.symbol.async-iterator"
+                //   // ]
+                // }
               ],
               "@babel/preset-react"
             ],
@@ -55,12 +56,12 @@ module.exports = opts => {
               "lodash",
               ["@babel/plugin-proposal-decorators", { legacy: true }],
               ["@babel/plugin-proposal-class-properties", { loose: true }],
-              [
-                "@babel/plugin-transform-runtime",
-                {
-                  useESModules: true
-                }
-              ]
+              // [
+              //   "@babel/plugin-transform-runtime",
+              //   {
+              //     useESModules: true
+              //   }
+              // ]
             ]
           }
         },

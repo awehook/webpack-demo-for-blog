@@ -1,6 +1,6 @@
-// import React from "react";
-import { Component } from "preact";
+import React, {Component} from "react";
 import { store } from "../store";
+// import { Component } from "preact";
 
 export default class ModuleViewer extends Component {
   render() {

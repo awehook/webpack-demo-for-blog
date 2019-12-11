@@ -1,5 +1,6 @@
-// import ReactDOM from "react-dom";
-import {h,render} from 'preact';
+import React from "react";
+import ReactDOM, {render} from "react-dom";
+// import {h,render} from 'preact';
 import { store } from "./store";
 import ModuleViewer from "./components/module-viewer";
 
