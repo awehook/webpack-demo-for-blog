@@ -4,7 +4,10 @@
   "license": "MIT",
   "main": "lib/cjs.js",
   "files": [
-    "lib/"
+    "lib",
+    "public",
+    "src",
+    "views"
   ],
   "scripts": {
     "start": "gulp watch -e prod",

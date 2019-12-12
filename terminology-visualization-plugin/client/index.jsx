@@ -16,7 +16,8 @@ try {
 }
 
 window.addEventListener("load", () => {
-  store.setData(window);
+  console.log(window.viewerData);
+  store.setData(window.viewerData);
 
   render(<ModuleViewer/>, document.getElementById('app'));
 });
