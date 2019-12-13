@@ -23,6 +23,7 @@
     "loader-utils": "^1.1.0",
     "lodash": "^4.17.15",
     "opener": "^1.5.1",
+    "react-json-tree": "^0.11.2",
     "schema-utils": "^1.0.0",
     "webpack-sources": "^1.1.0",
     "ws": "^6.0.0"
