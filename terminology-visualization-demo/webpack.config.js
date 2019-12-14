@@ -17,7 +17,7 @@ module.exports = {
     path: resolveApp("build"),
     filename: "static/js/bundle.js"
   },
-  plugins: [new TerminologyVisualizationPlugin(), new BundleAnalyzerPlugin()],
+  plugins: [new TerminologyVisualizationPlugin({port:9998}), new BundleAnalyzerPlugin()],
   module: {
     rules: [
       // {
@@ -46,5 +46,17 @@ module.exports = {
   },
   resolveLoader: {
     modules: ["node_modules", "node_modules/my-loader/lib"]
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'initial',
+      cacheGroups: {
+        external: {
+          test: /node_modules/,
+          name: 'external',
+          chunks: 'initial'
+        }
+      }
+    }
   }
 };

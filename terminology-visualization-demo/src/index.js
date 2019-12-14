@@ -5,3 +5,8 @@ console.log('style1',style1);
 console.log('inlineStyle',inlineStyle);
 
 welcome();
+
+function lazyLoad() {
+  let test = import('./module-b');
+  test();
+}
