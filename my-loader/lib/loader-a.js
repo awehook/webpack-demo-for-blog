@@ -1,3 +1,3 @@
 module.exports = function(input) {
-  return `${input}\nconsole.log('a');`
+  return `//require('my-loader/lib/lib-a')\n${input}\nconsole.log('a');`
 }

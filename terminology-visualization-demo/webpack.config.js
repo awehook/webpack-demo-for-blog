@@ -20,15 +20,15 @@ module.exports = {
   plugins: [new TerminologyVisualizationPlugin({port:9998}), new BundleAnalyzerPlugin()],
   module: {
     rules: [
-      // {
-      //   test: /\.js/,
-      //   exclude: [/node_modules/],
-      //   use: [
-      //     {
-      //       loader: loaderA
-      //     }
-      //   ]
-      // },
+      {
+        test: /\.js/,
+        exclude: [/node_modules/],
+        use: [
+          {
+            loader: loaderA
+          }
+        ]
+      },
       {
         test: /\.css/,
         use: [
