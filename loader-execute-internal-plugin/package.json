@@ -12,7 +12,7 @@
   },
 
   "dependencies": {
-    "loader-utils": "^1.1.0",
+    "loader-utils": "^1.4.2",
     "schema-utils": "^1.0.0",
     "webpack-sources": "^1.1.0"
   },
